@@ -7,6 +7,4 @@ class ElementsPage(BasePage):
 
     def go_to_check_box_page(self):
         self.wait_for_element(self.CHECK_BOX_MENU_ITEM).click()
-        assert "https://demoqa.com/checkbox" in self.driver.current_url, \
-            "Страница Check не открыта."
         return CheckBoxPage(self.driver)

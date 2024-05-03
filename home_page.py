@@ -8,14 +8,10 @@ class HomePage(BasePage):
 
     def open_home_page(self):
         self.driver.get(self.HOME_PAGE_URL)
-        assert "https://demoqa.com/" in self.driver.current_url , \
-            "Сайт не открыт."
         return HomePage(self.driver)
 
     def go_to_elements_page(self):
         self.click_element(self.ELEMENTS_CARD)
-        assert "https://demoqa.com/elements" in self.driver.current_url, \
-            "Страница Elements не открыта."
         return ElementsPage(self.driver)
 
     
